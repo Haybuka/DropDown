@@ -1,0 +1,138 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background: #c0392b;
+
+}
+
+@media screen and (min-width:500px) {
+
+
+	header {
+		display: grid;
+		grid-template-columns: repeat(12, 1fr);
+	}
+
+	h1 {
+		grid-column: 2/6;
+		color: #ecf0f1;
+
+	}
+
+	nav {
+		grid-column: 6/13;
+		margin: 10px auto;
+	}
+
+	ul {
+
+		display: grid;
+		grid-template-columns: repeat(12, 1fr);
+		grid-gap: 3px;
+		font-size: 20px;
+		list-style: none;
+	}
+
+	li a {
+		text-decoration: none;
+		color: #ecf0f1;
+
+	}
+
+	li.first {
+		grid-column: 5/6;
+	}
+
+	li.second {
+		grid-column: 7/8;
+	}
+
+	li.third {
+		grid-column: 10/11;
+	}
+}
+
+/* screen size to enact the drop down nav */
+@media screen and (max-width: 480px) {
+	header h1 {
+		text-align: center;
+		color: #ecf0f1;
+	}
+
+	/* target burger nav and apply the following */
+
+	.burger {
+		width: 100%;
+		height: 40px;
+		display: block;
+		background-image: url(picture/Hamburger_icon.svg.png);
+		background-position: 98% center;
+		background-repeat: no-repeat;
+		background-size: 25px;
+		background-color: #ecf0f1;
+		cursor: pointer;
+	}
+
+	nav {
+		background-color: brown;
+	}
+
+	nav ul {
+		padding: 0;
+		margin: 0;
+		height: 0;
+		overflow: hidden;
+	}
+
+	nav li {
+		list-style-type: none;
+	}
+
+	nav li a {
+		text-decoration: none;
+		padding: 10px;
+		display: block;
+		border-bottom: 1px solid #404040;
+		color: #fff;
+		font-family: 'Mada';
+	}
+
+	/* onClass list toggle by Js,This fires */
+	.open {
+		height: auto;
+	}
+
+	.animated {
+		background-color: purple;
+		width: 100px;
+		text-align: center;
+		border-top-left-radius: 20px;
+		border-top-right-radius: 20px;
+		float: left;
+		margin: 15px;
+
+	}
+
+	.animated:hover {
+		transform: rotateZ(360deg)translateX(70px)scale(3);
+		color: purple;
+		background-color: yellow;
+	}
+
+	.animated p,
+	h1 {
+		margin: 15px;
+		padding: 5px;
+
+		/* font-size: 1em; */
+		color: #ecf0f1;
+		width: 100%;
+	}
+
+	.animated p:hover {
+		color: red;
+		transform: rotateZ(90deg)
+	}
+}
